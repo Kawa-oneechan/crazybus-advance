@@ -23,7 +23,7 @@ CFILES	:=	main.c printf.c
 export AFILES	:= othergfx.a buses.a
 export ROFILES	:= $(SFILES:.s=.o) $(CFILES:.c=.o)
 export IOFILES	:= $(ICFILES:.c=.o) $(MAPPACK)
-export OFILES	:= $(ROFILES) $(IOFILES) toolinclude/irq_single.o
+export OFILES	:= $(ROFILES) $(IOFILES) toolinclude/irq_single._o
 
 # --------------------------------------------------------------------
 # OPTIONS
@@ -73,8 +73,9 @@ othergfx.a:
 
 all:    clean $(TARGET).elf
 
-# clean:
-#	rm $(AFILES) $(OFILES) $(DEPENDFILE) $(MAPFILE) $(TARGET).elf
+clean:
+	rm $(AFILES) $(ROFILES) $(IOFILES) $(DEPENDFILE) $(MAPFILE) $(TARGET).elf
+	rm buses/*.s buses/*.o othergfx/*.s othergfx/*.o
 
 depend:
 	$(CC) $(RCFLAGS) -M $(RCFILES) > $(DEPENDFILE)

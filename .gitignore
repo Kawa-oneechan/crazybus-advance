@@ -1,3 +1,6 @@
+buses/*.s
+othergfx/*.s
+
 # Prerequisites
 *.d
 
@@ -35,6 +38,7 @@
 *.i*86
 *.x86_64
 *.hex
+*.gba
 
 # Debug files
 *.dSYM/
