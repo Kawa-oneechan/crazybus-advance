@@ -1,0 +1,6 @@
+BUS(century390, "Century 390\n  Mercedes or Volvo chassis\n  400 HP\n  Capacity: 40 passengers\n  Extra luxurious.")
+BUS(jumbuss360, "Jum Buss 360\n  Scania or Volvo chassis\n  420 HP\n  Capacity: 48 passengers\n  Carriage of high quality.")
+//BUS(ent6000, "E-NT6000\n  Cummins engine\n  340 HP\n  Capacity: 40 passengers\n  Very basic luxury bus.")
+BUS(schoolbus, "School bus\n  Ford or Chevrolet engine\n  Underpowered\n  Capacity: 60 passengers\n  Uncomfy, but safe.")
+BUS(paradiso, "Paradiso GV1150\n  Volvo or Scania chassis\n  360 HP\n  Capacity: 44 passengers\n  Little lasting deluxe.")
+BUS(dutch, "Berkhof Ambassador 180\n  DAF chassis\n  225 HP\n  Capacity: 43 passengers\n  De groeten uit Nederland.")
