@@ -20,4 +20,5 @@ extern char* strcat(char *,const char *);
 extern int strcmp(char *,const char *);
 extern int strcpy(char *,const char *);
 extern void* memset(char*, int, int);
+extern char* itoa(int, char*, int);
 #endif

@@ -18,7 +18,7 @@ TITLE	:= $(TARGET)
 # Regular makefile continues here
 SFILES	:=	tonc_bios.s		\
 		
-CFILES	:=	main.c printf.c
+CFILES	:=	main.c itoa.c
 
 export AFILES	:= othergfx.a buses.a
 export ROFILES	:= $(SFILES:.s=.o) $(CFILES:.c=.o)
