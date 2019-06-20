@@ -247,7 +247,7 @@ inline void ClaxonNoise()
 void GameLoop()
 {
 	int i;
-	char b[256]; //a buffer for the distance counter to be written in.
+	char b[32]; //a buffer for the distance counter to be written in.
 	ClearBG1();
 	distance = 0;
 	//Copy the interface and our chosen bus.
@@ -272,11 +272,9 @@ void GameLoop()
 		OamBak[i].HPos = ((distance - 256) / 2) + (i * 32);
 		OamBak[i + 4].HPos = ((distance - 256) / 2) + (i * 32);
 	}
-	Write("==**CrazyBus Advance 1.1**==", 1, 16);
+	Write("==**CrazyBus Advance 1.2**==", 1, 16);
 	//Gotta write the distance before we fade in. We could just Write("Distance: 0", 1, 1) directly...
-	//sprintf(b, "Distance: %d  ", distance);
-	strcpy(b, "Distance: ");
-	itoa(distance, b + 10, 10);
+	strcpy(b, "Distance: 0");
 	Write(b, 1, 1);
 	FadeIn();
 	while(1)
@@ -288,8 +286,8 @@ void GameLoop()
 			OamBak[i + 4].HPos = ((distance - 256) / 2) + (i * 32);
 		}
 		//Update our distance counter no matter if we moved or not too.
-		//sprintf(b, "Distance: %d  ", distance);
-		itoa(distance, b + 10, 10);
+		itoa(distance, b + 10, 10); //10 being the string length of "Distance: ".
+		strcat(b, "   ");
 		Write(b, 1, 1);
 		DoVBlank();
 		KeyRead();
